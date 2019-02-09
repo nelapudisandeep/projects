@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calender</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="date">
+        <div class="top">
+            <span id="date"></span>
+        </div>
+        <div class="below">
+            <span id="date1"></span>
+        </div>
+    </div>
+    <script>
+        var d = new Date();
+        var seconds = d.getSeconds();
+        var minutes = d.getMinutes();
+        var hours = d.getHours();
+        var day = d.getDay();
+        var mon = d.getMonth();
+        mon += 1;
+        var month = d.getMonth();
+        var year = d.getFullYear();
+        var choice = 0;
+        switch(day){
+            case 0 : day = "Sunday";
+            break;
+            case 1 : day = "Monday";
+            break;
+            case 2 : day = "Tuesday";
+            break;
+            case 3 : day = "Wednesday";
+            break;
+            case 4 : day = "Thursday";
+            break;
+            case 5 : day = "Friday";
+            break;
+            case 6 : day = "Saturday";
+            break;}
+
+            switch(month){
+            case 0 : {month = "January";}
+            break;
+            case 1 :{month = "February";
+                }
+            break;
+            case 2 : {month = "March";
+                }
+            break;
+            case 3 : {month = "April";
+                }
+            break;
+            case 4 : {month = "May";
+                }
+            break;
+            case 5 : {month = "June";
+                }
+            break;
+            case 6 : {month = "July";
+                }
+            break;
+            case 7 : month = "August";
+            break;
+            case 8 : month = "September";
+            break;
+            case 9 : month = "October";
+            break;
+            case 10 : month = "November";
+            break;
+            case 11 : month = "December";
+            break;}
+            document.getElementById("date").innerHTML = mon;
+            document.getElementById("date1").innerHTML = mon;
+    </script>
+</body>
+</html>

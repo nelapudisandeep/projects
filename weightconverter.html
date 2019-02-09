@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+<title>Weight converter</title>
+<meta  charset="utf-8">
+<meta name = "viewport" content="width=device-width , initial-scale=1.0">
+<meta name ="author" content="nelapudi sandeep">
+<meta name = "keywords" content="">
+<meta name ="description" content="">
+<style>
+   *{
+      margin:0px;
+      padding:0px;
+      box-sizing:border-box;
+   }
+   .container{
+      width:50%;
+      margin:auto;
+      margin-top:50px;
+      background:#333;
+      border-radius:10px;
+   }
+   div{
+      margin:10px;
+      font-family:Tahoma;
+      font-size:40px;
+      font-weight:bold;
+      padding:5px;
+      //outline:1px solid red;
+   }
+   .input{
+      //outline:1px solid red;
+      margin:auto;
+      //box-sizing:border-box;
+      text-align:center;
+   }
+   .input input[type="number"]{
+      padding:10px 50px;
+      width:70%;
+      border-radius:20px;
+      border:1px solid #ccc;
+      font-size:30px;
+      outline:none;
+   }
+   .kilo, .gram, .pounds, .tons{
+      width:50%;
+      margin:auto;
+      padding:20px;
+      font-size:20px;
+      font-weight:normal;
+      color:#fff;
+      font-family:Comic Sans MS;
+      text-align:left;
+      padding-left:10px;
+   }
+   p{
+      display:inline;
+   }
+   button{
+      padding:10px 15px;
+      border-radius:15px;
+      font-weight:bold;
+      font-size:16px;
+      cursor:pointer;
+      outline:none;
+   }
+   .kilo:hover ,.gram:hover,.pounds:hover,.tons:hover{
+      background:#ccc;
+      color:black;
+      border-bottom:2px solid red;
+      transition:all 0.5s ease;
+      //border-left:2px solid red;
+   }
+   .header{
+      width:50%;
+      padding:10px;
+      color:#bbb;
+      margin:auto;
+      margin-top:100px;
+      //outline:1px solid red;
+      font-family:Comic Sans MS;
+      text-align:center;
+   }
+   body{
+      background:linear-gradient(to bottom right,#818181,#000);
+      background-size:cover;
+   }
+</style>
+</head>
+<body>
+   <div class="header">
+      <h1>Weight Converter</h1>
+   </div>
+   <div class="container">
+      <div class="input">
+         <input type="number"  value = "0" placeholder = "Enter weight in Ounces...." id="input">
+         <button id="btn" value="submit" onclick="getData()">Convert</button>
+      </div>
+      <div class="kilo">
+         <p>In Kilo : </p>
+         <p id="kilo"></p>
+      </div>
+      <div class="gram">
+         <p>In Gram : </p>
+         <p id="gram"></p>
+      </div>
+      <div class="pounds">
+         <p>In Pound : </p>
+         <p id="pounds"></p>
+      </div>
+      <div class="tons">
+         <p>In Tons : </p>
+         <p id="tons"></p>
+      </div>
+
+   </div>
+   <script>
+      var input= 0.0;
+        function getData(){
+           if(document.getElementById("input").value == 0 ){
+            alert("Invalid Input!");
+          }else{
+            input = document.getElementById("input").value;
+            var pound = input*0.0625;
+            var kilo = input*0.0283495;
+            var gram = 28.3495 * input ;
+            var ton = 0.00002835*input;
+            document.getElementById("kilo").innerHTML = kilo;
+            document.getElementById("gram").innerHTML = gram;
+            document.getElementById("pounds").innerHTML = pound;
+            document.getElementById("tons").innerHTML = ton;
+          }
+       }
+   </script>
+</body>
+</html>
