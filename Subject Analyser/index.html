@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Subject Analyser</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!--    ! get the topics list filled 
+        ! upon clicking the topic item it should get a star
+        ! upon clicking the submit button we should get the total number of stars a topic has got
+        ! upon refresh we need to update the contents of the subjects from the localStorage
+    
+    -->
+    <h1>Topic Wise Analyser</h1>
+    <label for="subject" id="subLabel">Subject : </label>
+    <input type="text" id="subject">
+    <div class="container" id="container">
+        <div class="header" id="header"></div>
+        <div class="content">
+            <div class="firstCol" id="firstCol"></div>
+             <div class="secondCol" id="secondCol"></div>
+            <div class="thirdCol" id="thirdCol"></div>
+           
+            
+        </div>
+    </div>
+    <button class="btn" id="btn1">Add</button>
+    <button class="btn" id="btn2">Submit</button>
+    <button class="btn" id="btn3">Visualise</button>
+    
+<!--    modal divs    -->
+  <div class="containerModal" id="containerModal">
+    <button class="btn" id="close">Close</button>
+   <div class="chartContainer"  id="chartContainer">
+   </div>
+</div>
+    
+
+    <script src="index.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
